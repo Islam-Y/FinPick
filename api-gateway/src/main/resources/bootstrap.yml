@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: api-gateway       # совпадает с файлом в configs-main (user-service, payment-service и т.д.)
+  cloud:
+    config:
+      uri: https://github.com/Islam-Y/config-server-finpick.git:9997  # адрес Config Server
+      fail-fast: true
