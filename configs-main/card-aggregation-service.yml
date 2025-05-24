@@ -1,0 +1,7 @@
+server:
+  port: 9993
+card:
+  sync:
+    cron: 0 0/30 * * * *
+user:
+  role: tester

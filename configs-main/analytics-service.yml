@@ -1,0 +1,6 @@
+server:
+  port: 9992
+kafka:
+  bootstrap-servers: kafka:9092
+user:
+  role: developer

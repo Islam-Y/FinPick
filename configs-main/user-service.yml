@@ -1,0 +1,9 @@
+server:
+  port: 9994
+spring:
+  datasource:
+    url: jdbc:postgresql://db.finpick.local:5432/users
+    username: user
+    password: pass
+user:
+  role: production

@@ -1,15 +1,21 @@
-server.servlet.context-path: '/API/v1/finPick'
 server:
+  servlet:
+    context-path: '/API/v1/finPick'
   port: ${PORT:9997}
 spring:
   cloud:
     config:
       server:
         git:
-          uri: ${:}
+          uri: ${CONFIG_URL:C:\\Users\\yunus\\YandexDisk\\PC ISLAM\\Desktop\\my_files\\ITMO\\1_st_year\\2_nd_semester\\PVS\\FinPick\\configs-main}
           username: ${REPO_USER:git_finPick}
           password: ${REPO_PASS:git_finPick_pass}
   security:
     user:
-      name: ${SERVER_USER:git_finPick}
-      password: ${SERVER_PASS:git_finPick_pass}
+      name: ${SERVER_USER:config}
+      password: ${SERVER_PASS:config_pass}
+  management:
+    endpoints:
+      web:
+        exposure:
+          include: health,info

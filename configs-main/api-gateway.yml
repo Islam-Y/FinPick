@@ -1,0 +1,9 @@
+server:
+  port: 9995
+spring:
+  cloud:
+    gateway:
+      routes:
+      # маршруты...
+user:
+  role: developer

@@ -1,0 +1,8 @@
+server:
+  port: 9996
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+user:
+  role: production

@@ -1,0 +1,8 @@
+server:
+  port: 9991
+spring:
+  mail:
+    host: smtp.finpick.local
+    port: 587
+user:
+  role: production

@@ -1,0 +1,4 @@
+server:
+  port: 9997
+user:
+  role: developer

@@ -1,0 +1,6 @@
+server:
+  port: 9989
+nfc:
+  enabled: true
+user:
+  role: tester

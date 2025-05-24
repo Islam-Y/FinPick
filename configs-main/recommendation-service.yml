@@ -1,0 +1,6 @@
+server:
+  port: 9990
+tensor:
+  model-path: /models/recommendation
+user:
+  role: developer
