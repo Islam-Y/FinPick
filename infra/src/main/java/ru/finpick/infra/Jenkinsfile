@@ -1,0 +1,22 @@
+pipeline {
+  agent any
+  stages {
+    stage('Build & Test') {
+      steps {
+        sh './scripts/build-all.sh'
+      }
+    }
+    stage('Deploy to Dev') {
+      steps {
+        sh './scripts/deploy-all.sh dev'
+      }
+    }
+  }
+  post {
+    failure {
+      mail to: 'dev-team@finpick.com',
+           subject: "Build failed: ${env.JOB_NAME}",
+           body: "Something went wrong. Check logs."
+    }
+  }
+}

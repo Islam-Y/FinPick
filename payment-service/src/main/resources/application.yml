@@ -1,0 +1,4 @@
+# payment-service/src/main/resources/application.yml
+emv:
+  gateway:
+    url: http://api-gateway/api/v1/external   # маршрут через API-Gateway к внешнему шлюзу

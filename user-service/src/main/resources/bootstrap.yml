@@ -5,3 +5,8 @@ spring:
     config:
       uri: https://github.com/Islam-Y/config-server-finpick.git:9997  # адрес Config Server
       fail-fast: true
+      netflix:
+        eureka:
+          client:
+            serviceUrl:
+              defaultZone: http://eureka-server:8761/eureka/
