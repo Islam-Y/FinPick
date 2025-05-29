@@ -6,41 +6,36 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 import lombok.Getter;
 import lombok.Setter;
 
 import java.time.LocalDateTime;
 
 /**
- * Событие, зафиксированное в системе аналитики.
+ * Сущность, представляющая одно аналитическое событие.
  */
 @Entity
 @Getter
 @Setter
+@Table(name = "analytics_event")
 public class AnalyticsEvent {
 
+    /** PK — автогенерируемый идентификатор */
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    /**
-     * Тип события (например, PAYMENT, LOGIN, NOTIFICATION_CLICK).
-     */
+    /** Тип события */
     private String type;
 
-    /**
-     * Идентификатор пользователя, связанного с событием.
-     */
+    /** Идентификатор пользователя */
     private Long userId;
 
-    /**
-     * Время события.
-     */
+    /** Время сохранения события */
     private LocalDateTime timestamp;
 
-    /**
-     * Дополнительные данные в виде строки (например, JSON).
-     */
+    /** Произвольная полезная нагрузка */
     @Column(length = 2000)
     private String payload;
 }

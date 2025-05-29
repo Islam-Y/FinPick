@@ -10,18 +10,12 @@ import lombok.Setter;
 @Setter
 public class AnalyticsEventRequest {
 
-    /**
-     * Тип события (например, PAYMENT, LOGIN).
-     */
-    public String type;
+    /** Тип события (например, "PAYMENT", "LOGIN" и т.д.) */
+    private String type;
 
-    /**
-     * Идентификатор пользователя.
-     */
-    public Long userId;
+    /** Идентификатор пользователя, связанного с событием */
+    private Long userId;
 
-    /**
-     * Дополнительные данные (JSON).
-     */
-    public String payload;
+    /** Произвольная полезная нагрузка (JSON-строка или прочее) */
+    private String payload;
 }
