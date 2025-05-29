@@ -1,0 +1,8 @@
+bank:
+  clients:
+    tinkoff:
+      url: https://api.tinkoff.ru/cards
+      apiKey: ${TINKOFF_API_KEY}
+    sber:
+      url: https://api.sberbank.ru/cards
+      apiKey: ${SBER_API_KEY}
